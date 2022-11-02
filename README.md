@@ -33,13 +33,13 @@ Edit **origin_filtered.dump** and **result_filtered.dump**  to keep only changes
 2. Find the `instructions:` line below it.
 3. Remove all lines above this line (including the `instructions:` line).
 4. This is the start of the method code.
-5. Find the end of the method and remove all lines below.
+5. Find the end of the method code (usually return, return-void or return-object) and remove all lines below.
 6. Verify that all HEX instructions were properly filtered (operands that may change between app builds should be masked by ** symbols). Generally, the second byte of almost all opcodes should be masked
 7. Save dump files and close the editor.
 8. Press ENTER in lpdiff's terminal to continue.
 9. lpdiff will open `EDITOR` with the resulting LuckyPatcher patch lines.
 
-## Adding opcode masking data
+# Adding opcode masking data
 
 You should edit the `write_sed_commands` function in **lpdiff.sh** if you need to mask opcodes that are not yet added to lpdiff.
 
