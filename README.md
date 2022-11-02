@@ -17,7 +17,7 @@ File names may be arbitrary, but must have **.smali** at their ends
 
 ## Start lpdiff
 
-Change **EDITOR** variable to your favorite editor and start the script:
+Change **EDITOR** variable in **lpdiff.sh** to your favorite editor and start the script:
 
 `./lpdiff.sh origin.smali result.smali`
 
