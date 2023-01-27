@@ -52,18 +52,30 @@ s/: 18../: 18**/g
 s/: 19../: 19**/g
 # const-string: zap all operands
 s/: 1a.. ..../: 1a** ****/g
+# check-cast: zap all operands
+s/: 1f.. ..../: 1f** ****/g
 # new-instance: zap all operands
 s/: 22.. ..../: 22** ****/g
 # throw: zap register operand
 s/: 27../: 27**/g
 # goto: zap offset operand
 s/: 28../: 28**/g
+# goto/16: zap offset operand
+s/: 29.. ..../: 29** ****/g
 # packed-switch: zap all operands
 s/: 2b.. .... ..../: 2b** **** ****/g
 # cmpl-float: zap all operands
 s/: 2d.. ..../: 2d** ****/g
 # cmpg_float: zap all operands
 s/: 2e.. ..../: 2e** ****/g
+# cmp-long: zap all operands
+s/: 31.. ..../: 31** ****/g
+# if-ne: zap all operands
+s/: 33.. ..../: 33** ****/g
+# if-gt: zap all operands
+s/: 36.. ..../: 36** ****/g
+# if-eqz: zap all operands
+s/: 38.. ..../: 38** ****/g
 # if-nez: zap all operands
 s/: 39.. ..../: 39** ****/g
 # if-gez: zap all operands
@@ -76,6 +88,14 @@ s/: 52.. ..../: 52** ****/g
 s/: 54.. ..../: 54** ****/g
 # iput: zap all operands
 s/: 59.. ..../: 59** ****/g
+# sget: zap all operands
+s/: 60.. ..../: 60** ****/g
+# sget-wide: zap all operands
+s/: 61.. ..../: 61** ****/g
+# sget-boolean: zap all operands
+s/: 63.. ..../: 63** ****/g
+# sput: zap all operands
+s/: 67.. ..../: 67** ****/g
 # invoke-virtual: zap all operands
 s/: 6e.. .... ..../: 6e** **** ****/g
 # invoke-direct: zap all operands
@@ -84,10 +104,20 @@ s/: 70.. .... ..../: 70** **** ****/g
 s/: 71.. .... ..../: 71** **** ****/g
 # invoke-interface: zap all operands
 s/: 72.. .... ..../: 72** **** ****/g
+# int-to-long: zap all operands
+s/: 81../: 81**/g
 # long-to-float: zap all operands
 s/: 85../: 85**/g
 # float-to-double: zap all operands
 s/: 89../: 89**/g
+# add-int/2addr: zap all operands
+s/: b0../: b0**/g
+# mul-long/2addr: zap all operands
+s/: bb../: bb**/g
+# sub-long/2addr: zap all operands
+s/: bc../: bc**/g
+# mul-long/2addr: zap all operands
+s/: bd../: bd**/g
 # div-float/2addr: zap all operands
 s/: c9../: c9**/g
 # add-double/2addr: zap all operands
